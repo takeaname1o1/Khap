@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:khap/view%20model/controller.dart';
-import 'package:khap/view%20model/responsive.dart';
 
-import 'navigation_button.dart';
+import 'navigation_button.dart'; // check
 
 class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
@@ -43,9 +42,15 @@ class NavigationButtonList extends StatelessWidget {
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
-                  text: ' fix me '),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About us'),
+                  text: 'Online Form '),
+              NavigationTextButton(
+                  onTap: () {
+                    controller.animateToPage(0,
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  },
+                  text: 'Updates'),
+
             ],
           ),
         );

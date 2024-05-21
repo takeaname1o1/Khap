@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../model/certificate_model.dart';
+import '../../../model/form_model.dart';
 import '../../../res/constants.dart';
-import '../../../view model/getx_controllers/certification_controller.dart';
-import 'certificates_details.dart';
+import '../../../view model/getx_controllers/form_controller.dart';
+import 'form_details.dart';
 
-class CertificateGrid extends StatelessWidget {
+class FormGrid extends StatelessWidget {
   final int crossAxisCount;
   final double ratio;
-  CertificateGrid({super.key, this.crossAxisCount = 3, this.ratio = 1.3});
-  final controller = Get.put(CertificationController());
+  FormGrid({super.key, this.crossAxisCount = 3, this.ratio = 1.3});
+  final controller = Get.put(FormController());
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      itemCount: certificateList.length,
+      itemCount: formList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
       itemBuilder: (context, index) {
@@ -40,7 +40,7 @@ class CertificateGrid extends StatelessWidget {
                     blurRadius: controller.hovers[index] ? 20 : 10,
                   ),
                 ]),
-            child: CertificateStack(index: index)));
+            child: FormStack(index: index)));
       },
     );
   }
