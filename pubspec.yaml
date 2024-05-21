@@ -1,0 +1,79 @@
+name: khap
+description: A new Flutter project by students.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  google_fonts: ^5.1.0
+  flutter_svg: ^2.0.7
+  get: ^4.6.5
+  photo_view: ^0.14.0
+  url_launcher: ^6.1.12
+  font_awesome_flutter: ^10.5.0
+  package_rename: ^1.6.0
+  share_plus: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  icons_launcher: ^2.1.7
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/
+
+icons_launcher:
+  image_path: '/home/alp/Desktop/project/Khap_app_web/assets/AppIcons/playstore.png'
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+
+
+package_rename_config:
+  android:
+    app_name: Khap
+    package_name: com.khap
+    lang: kotlin
+
+  ios:
+    app_name: Khap
+    bundle_name: com.khap
+    package_name: com.khap
+
+  linux:
+    app_name: Khap
+    package_name: com.khap
+    exe_name: khap
+
+  macos:
+    app_name: Khap
+    package_name: com.khap
+    copyright_notice: © 2024 Khap
+
+  web:
+    app_name: Khap
+    short_app_name: Khap
+    description: A social networking app for connecting people.
+
+  windows:
+    app_name: Khap
+    organization: Khap Inc.
+    copyright_notice: © 2024 Khap Inc.
+    exe_name: khap
