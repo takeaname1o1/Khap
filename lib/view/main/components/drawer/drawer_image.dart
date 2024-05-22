@@ -8,22 +8,19 @@ class DrawerImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 100,
-      padding: const EdgeInsets.all(defaultPadding/6),
+      height:150,
+      width: 150,
+      padding: const EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          
-         
-          boxShadow: const [
-            BoxShadow(color: Colors.pink,blurRadius: 10,offset: Offset(0, 2)),
-            BoxShadow(color: Colors.blue,blurRadius: 10,offset: Offset(0, -2)),
-          ]
+          borderRadius: BorderRadius.circular(80),
+
+
+
       ),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: Transform.rotate(
-              angle: 0.1,
+              angle: 0.01,
               child: Image.asset('assets/images/profile.png',fit: BoxFit.cover,))),
     );
   }

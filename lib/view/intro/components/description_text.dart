@@ -15,7 +15,7 @@ class AnimatedDescriptionText extends StatelessWidget {
       builder: (context, value, child) {
         return Text(
           // TODO: hello
-          'hello12345 ${Responsive.isLargeMobile(context) ? '\n' : ''}every step from ${!Responsive.isLargeMobile(context) ? '\n' : ''}concept to deployment.',
+          'This app is maintained and ${Responsive.isLargeMobile(context) ? '\n' : ''}updated ${!Responsive.isLargeMobile(context) ? 'by constant feedback' : 'by the students and community'} on below mentioned community',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.grey, wordSpacing: 2, fontSize: value),

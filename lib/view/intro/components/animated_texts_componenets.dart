@@ -64,11 +64,14 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Image.asset(
-                'assets/images/center.png',
-          
-                      
-                fit: BoxFit.fitWidth,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 14.0, right: 8.0),
+                child: Image.asset(
+                  'assets/images/center.png',
+
+
+                  fit: BoxFit.fitWidth,
+                ),
               ),
             ),
           ),
