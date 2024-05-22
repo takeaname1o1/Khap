@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "975727897994",
+    "project_id": "khap-96581",
+    "storage_bucket": "khap-96581.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975727897994:android:005c304868a6b744232c73",
+        "android_client_info": {
+          "package_name": "com.khap.flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEs0rAtAc8y1uaRBY3WDYJFPvsT3Y2vUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

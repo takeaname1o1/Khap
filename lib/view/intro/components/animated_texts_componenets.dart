@@ -36,9 +36,9 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
         return Transform.translate(
           offset: Offset(0, 2.5 * value), // Move the container up and down
           child: Container(
-            height: widget.height!,
-            width: widget.width!,
-            padding: const EdgeInsets.all(defaultPadding / 10),
+            height: widget.height,
+            width: widget.height,
+           
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               gradient: const LinearGradient(colors: [
@@ -66,16 +66,8 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
               ),
               child: Image.asset(
                 'assets/images/center.png',
-                height: Responsive.isLargeMobile(context)
-                    ? MediaQuery.sizeOf(context).width * 0.2
-                    : Responsive.isTablet(context)
-                        ? MediaQuery.sizeOf(context).width * 0.14
-                        : 200,
-                width: Responsive.isLargeMobile(context)
-                    ? MediaQuery.sizeOf(context).width * 0.2
-                    : Responsive.isTablet(context)
-                        ? MediaQuery.sizeOf(context).width * 0.14
-                        : 200,
+          
+                      
                 fit: BoxFit.fitWidth,
               ),
             ),

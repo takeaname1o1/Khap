@@ -13,7 +13,7 @@ class ConnectButton extends StatelessWidget {
       child: InkWell(
         onTap: () {
           // TODO: update connect
-          launchUrl(Uri.parse('https://play.google.com/store/apps/details?id=com.pubg.imobile&pcampaignid=web_share'));
+          launchUrl(Uri.parse('https://khap-96581.web.app/'));
         },
         borderRadius: BorderRadius.circular(defaultPadding +10),
         child: Container(
@@ -34,9 +34,9 @@ class ConnectButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(FontAwesomeIcons.shareNodes,color: Colors.greenAccent,size: 15,),
+              const Icon(FontAwesomeIcons.chrome,color: Colors.greenAccent,size: 15,),
               const SizedBox(width : defaultPadding/4),
-              Text('Share',style: Theme.of(context).textTheme.labelSmall!.copyWith(
+              Text('Web',style: Theme.of(context).textTheme.labelSmall!.copyWith(
                   color: Colors.white,
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.bold

@@ -10,7 +10,7 @@ class DownloadButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        launchUrl(Uri.parse('https://drive.google.com/file/d/1HSIe7rdk8VtrAL4DQuybfMHQgDrQ6xNs/view?usp=sharing'));
+        launchUrl(Uri.parse('https://chat.whatsapp.com/KEMB82OENDF5wKrx7gxBmE'));
       },
       child: Container(
         alignment: Alignment.center,
@@ -32,14 +32,14 @@ class DownloadButton extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              'Download APK',
+              'Join Community',
               style: Theme.of(context).textTheme.labelSmall!.copyWith(
                   color: Colors.white,
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(width: defaultPadding/3,),
-            const Icon(FontAwesomeIcons.googlePlay,color: Colors.white70,size: 15,)
+            const Icon(FontAwesomeIcons.whatsapp,color: Colors.white70,size: 15,)
           ],
         ),
       ),
