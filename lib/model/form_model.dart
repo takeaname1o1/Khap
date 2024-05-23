@@ -20,29 +20,23 @@ List<FormModel> formList = [
     course: 'B.Tech',
     year: '2023',
     semester: '1st Semester',
-    dlink:  'https://www.coursera.org/account/accomplishments/certificate/HQ4LFHSF4LKZ',
+    dlink:
+        'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
-
   FormModel(
     name: 'unofficial whatsapp link ',
     course: 'B.Tech',
     year: 'JUL 2023',
     semester: '1st Semester',
-    dlink:  'https://codered.eccouncil.org/certificate/43a2d2a7-40ed-4230-9e65-a9aa0935e651?logged=false',
+    dlink:
+        'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
-FormModel(
+  FormModel(
     name: 'unofficial telegram link ',
     course: 'B.Tech',
     year: 'JUL 2023',
     semester: '1st Semester',
-    dlink:  'https://codered.eccouncil.org/certificate/43a2d2a7-40ed-4230-9e65-a9aa0935e651?logged=false',
+    dlink:
+        'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
-
-
-
-
-
-
-
-
 ];

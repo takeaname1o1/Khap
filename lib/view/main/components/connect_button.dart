@@ -13,7 +13,7 @@ class ConnectButton extends StatelessWidget {
       child: InkWell(
         onTap: () {
           // TODO: update connect
-          launchUrl(Uri.parse('https://khap-96581.web.app/'));
+          launchUrl(Uri.parse('https://khap.engineer/'));
         },
         borderRadius: BorderRadius.circular(defaultPadding + 10),
         child: Container(
@@ -54,7 +54,6 @@ class ConnectButton extends StatelessWidget {
                 ),
               ],
             )),
-            
       ),
     );
   }

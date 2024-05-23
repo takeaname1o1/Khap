@@ -16,27 +16,19 @@ class CertificateModel {
 
 List<CertificateModel> certificateList = [
   CertificateModel(
-    name: 'Getting started with Flutter Development',
+    name: 'coming soon',
     organization: 'B.Tech',
     date: 'AUG 2023',
     skills: '1st Semester',
-    credential:  'https://www.coursera.org/account/accomplishments/certificate/HQ4LFHSF4LKZ',
+    credential:
+        ' https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png ',
   ),
-
   CertificateModel(
-    name: 'Network Defense Essentials (NDE)',
+    name: 'coming soon',
     organization: 'B.Tech',
     date: 'JUL 2023',
     skills: '1st Semester',
-    credential:  'https://codered.eccouncil.org/certificate/43a2d2a7-40ed-4230-9e65-a9aa0935e651?logged=false',
+    credential:
+        'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
-
-
-
-
-
-
-
-
-
 ];
