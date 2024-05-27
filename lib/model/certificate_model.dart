@@ -21,7 +21,7 @@ List<CertificateModel> certificateList = [
     date: 'AUG 2023',
     skills: '1st Semester',
     credential:
-        ' https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png ',
+        'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
   CertificateModel(
     name: 'coming soon',

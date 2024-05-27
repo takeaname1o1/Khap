@@ -27,10 +27,10 @@ class forms extends StatelessWidget {
           Expanded(
               child: Responsive(
                   desktop: FormGrid(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     ratio: 1.5,
                   ),
-                  extraLargeScreen: FormGrid(crossAxisCount: 4, ratio: 1.6),
+                  extraLargeScreen: FormGrid(crossAxisCount: 3, ratio: 1.6),
                   largeMobile: FormGrid(crossAxisCount: 1, ratio: 1.8),
                   mobile: FormGrid(crossAxisCount: 1, ratio: 1.4),
                   tablet: FormGrid(
