@@ -58,7 +58,7 @@ class FormStack extends StatelessWidget {
                 Text.rich(
                   maxLines: 1,
                   TextSpan(
-                      text: 'semester : ',
+                      text: 'Quote : ',
                       style: const TextStyle(
                         color: Colors.white,
                       ),
@@ -101,7 +101,7 @@ class FormStack extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Doc Link',
+                          'Social Link',
                           style: TextStyle(color: Colors.white, fontSize: 10),
                         ),
                         SizedBox(
