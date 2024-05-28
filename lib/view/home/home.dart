@@ -4,6 +4,7 @@ import 'package:khap/view/form/form.dart';
 import 'package:khap/view/intro/introduction.dart';
 import 'package:khap/view/main/main_view.dart';
 import 'package:khap/view/projects/project_view.dart';
+import 'package:khap/view/map/map.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,10 +12,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainView(pages: [
-      const Introduction(),
-      ProjectsView(),
+      maps(),
+       forms(), // club
+      ProjectsView(), 
+     
+     
+
       Certifications(),
-      forms(),
+       Introduction(),
+      
     ]);
   }
 }

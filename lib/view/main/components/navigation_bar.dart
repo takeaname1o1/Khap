@@ -4,12 +4,13 @@ import 'package:khap/view/intro/components/side_menu_button.dart';
 import 'package:khap/view/main/components/connect_button.dart';
 //import '../../../res/constants.dart';
 import 'navigation_button_list.dart';
+import 'package:khap/view%20model/controller.dart';
 
 class TopNavigationBar extends StatelessWidget {
   const TopNavigationBar({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( 
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -17,8 +18,15 @@ class TopNavigationBar extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(0),
             child: !Responsive.isLargeMobile(context)
-                ? Image.asset(
-                    'assets/logotopleft.png',
+                ? GestureDetector(
+                    onTap: () {
+                      controller.animateToPage(3,
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeInOut);
+                    },
+                    child: Image.asset(
+                      'assets/logotopleft.png',
+                    ),
                   )
                 : MenuButton(
                     onTap: () => Scaffold.of(context).openDrawer(),
