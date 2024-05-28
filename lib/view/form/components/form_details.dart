@@ -16,7 +16,9 @@ class FormStack extends StatelessWidget {
       onHover: (value) {
         controller.onHover(index, value);
       },
-      onTap: () {},
+      onTap: () {
+        // TODO : add
+      },
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(
           padding: const EdgeInsets.all(defaultPadding),
@@ -39,18 +41,9 @@ class FormStack extends StatelessWidget {
                 const SizedBox(
                   height: defaultPadding,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      formList[index].course,
-                      style: const TextStyle(color: Colors.amber),
-                    ),
-                    Text(
-                      formList[index].year,
-                      style: const TextStyle(color: Colors.grey, fontSize: 12),
-                    ),
-                  ],
+                Text(
+                  formList[index].cName,
+                  style: const TextStyle(color: Colors.amber),
                 ),
                 const SizedBox(
                   height: defaultPadding / 2,
@@ -64,7 +57,7 @@ class FormStack extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: formList[index].semester,
+                          text: formList[index].quote,
                           style: const TextStyle(
                               color: Colors.grey,
                               overflow: TextOverflow.ellipsis),

@@ -19,7 +19,7 @@ List<CertificateModel> certificateList = [
     name: 'coming soon',
     organization: 'B.Tech',
     date: 'AUG 2023',
-    skills: '1st Semester',
+    skills: '1st quote',
     credential:
         'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),
@@ -27,7 +27,7 @@ List<CertificateModel> certificateList = [
     name: 'coming soon',
     organization: 'B.Tech',
     date: 'JUL 2023',
-    skills: '1st Semester',
+    skills: '1st quote',
     credential:
         'https://cdn.dribbble.com/users/2769842/screenshots/15727383/media/981ee3a0f3eac319f0881ea988540678.png',
   ),

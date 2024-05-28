@@ -14,7 +14,7 @@ class Knowledges extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Text(
-            'Course Structure B.Tech\n1st and 2nd Semester (all branches)',
+            'cName Structure B.Tech\n1st and 2nd quote (all branches)',
             style: TextStyle(color: Colors.white),
           ),
         ),

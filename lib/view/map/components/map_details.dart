@@ -43,7 +43,7 @@ class FormStack extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      formList[index].course,
+                      formList[index].cName,
                       style: const TextStyle(color: Colors.amber),
                     ),
                     Text(
@@ -64,7 +64,7 @@ class FormStack extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: formList[index].semester,
+                          text: formList[index].quote,
                           style: const TextStyle(
                               color: Colors.grey,
                               overflow: TextOverflow.ellipsis),

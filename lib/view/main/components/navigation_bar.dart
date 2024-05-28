@@ -20,7 +20,7 @@ class TopNavigationBar extends StatelessWidget {
             child: !Responsive.isLargeMobile(context)
                 ? GestureDetector(
                     onTap: () {
-                      controller.animateToPage(3,
+                      controller.animateToPage(4,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
                     },

@@ -12,20 +12,23 @@ class maps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/mapbg.png'),
-             colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.1), BlendMode.dstATop), 
-            fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/dogo.gif',
+              fit: BoxFit.cover,
+              color: Colors.black.withOpacity(0.3),
+              colorBlendMode: BlendMode.dstATop,
+            ),
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const TitleText(prefix: 'map', title: 'data'),
-          ],
-        ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const TitleText(prefix: 'meme', title: 'dog'),
+            ],
+          ),
+        ],
       ),
     );
   }
