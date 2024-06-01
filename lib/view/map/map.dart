@@ -4,10 +4,10 @@ import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 import 'package:khap/view/projects/components/title_text.dart';
 import 'package:get/get.dart';
 
-class maps extends StatelessWidget {
+class Maps extends StatelessWidget {
   final controller = Get.put(FormController());
 
-  maps({Key? key}) : super(key: key);
+  Maps({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

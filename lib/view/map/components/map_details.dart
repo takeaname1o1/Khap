@@ -47,7 +47,7 @@ class FormStack extends StatelessWidget {
                       style: const TextStyle(color: Colors.amber),
                     ),
                     Text(
-                      formList[index].year,
+                      formList[index].quote,
                       style: const TextStyle(color: Colors.grey, fontSize: 12),
                     ),
                   ],

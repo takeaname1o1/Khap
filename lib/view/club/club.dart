@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:khap/res/constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:dashboard/dashboard.dart';
@@ -88,23 +89,20 @@ class ClubWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color.fromARGB(255, 0, 0, 0);
+    const Color.fromARGB(255, 0, 0, 0);
     return GestureDetector(
-      onTap: () => launchUrl(club.socialLink),
-      child: Image.network(
-        club.logo,
-        fit: BoxFit.fitWidth,
-        height: 100,
-        width: 100,
+      //   launchUrl(Uri.parse(certificateList[index].credential));
+      onTap: () => launchUrl(Uri.parse(club.socialLink)),
+      child: Container(
+        color: const Color.fromARGB(255, 0, 0, 0),
+        child: Image.network(
+          club.logo,
+          fit: BoxFit.fitWidth,
+          height: 100,
+          width: 100,
+        ),
       ),
     );
   }
-
-  void launchUrl(String url) async {
-    if (await canLaunchUrlString(url)) {
-      await launchUrlString(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 }
+
