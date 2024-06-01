@@ -3,41 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:khap/view%20model/getx_controllers/certification_controller.dart';
 import 'package:khap/view/projects/components/title_text.dart';
 import 'package:get/get.dart';
-import '../../res/constants.dart';
-import '../../view model/responsive.dart';
-import 'components/certification_grid.dart';
 
 class Certifications extends StatelessWidget {
   final controller = Get.put(CertificationController());
   Certifications({super.key});
-  @override
+
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
-          if (Responsive.isLargeMobile(context))
-            const SizedBox(
-              height: defaultPadding,
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/dogo.gif',
+              fit: BoxFit.cover,
+              color: Colors.black.withOpacity(0.3),
+              colorBlendMode: BlendMode.dstATop,
             ),
-          const TitleText(prefix: 'Certicate', title: 'Format'),
-          const SizedBox(
-            height: defaultPadding,
           ),
-          Expanded(
-              child: Responsive(
-                  desktop: CertificateGrid(
-                    crossAxisCount: 3,
-                    ratio: 1.5,
-                  ),
-                  extraLargeScreen:
-                      CertificateGrid(crossAxisCount: 4, ratio: 1.6),
-                  largeMobile: CertificateGrid(crossAxisCount: 1, ratio: 1.8),
-                  mobile: CertificateGrid(crossAxisCount: 1, ratio: 1.4),
-                  tablet: CertificateGrid(
-                    ratio: 1.7,
-                    crossAxisCount: 2,
-                  )))
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const TitleText(prefix: '', title: ''),
+            ],
+          ),
         ],
       ),
     );

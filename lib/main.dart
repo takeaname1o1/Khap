@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:khap/res/constants.dart';
 import 'package:khap/view/splash/splash_view.dart';
@@ -13,7 +13,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(BetterFeedback(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

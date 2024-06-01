@@ -2,6 +2,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../res/constants.dart';
+import 'package:feedback/feedback.dart';
 
 class ConnectButton extends StatelessWidget {
   const ConnectButton({super.key});
@@ -11,10 +12,17 @@ class ConnectButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: InkWell(
-        onTap: () {
-          // TODO: update connect
-          launchUrl(Uri.parse('https://khap.engineer/'));
-        },
+        onTap: (){
+            BetterFeedback.of(context).show((UserFeedback feedback) {
+              // Handle the feedback submission here if not handled globally
+              print('Feedback: ${feedback.text}');
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Feedback submitted: ${feedback.text}'),
+                ),
+              );
+            });
+          },
         borderRadius: BorderRadius.circular(defaultPadding + 10),
         child: Container(
             height: 60,
@@ -40,13 +48,13 @@ class ConnectButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(
-                  FontAwesomeIcons.chrome,
+                  FontAwesomeIcons.message,
                   color: Colors.greenAccent,
                   size: 15,
                 ),
                 const SizedBox(width: defaultPadding / 4),
                 Text(
-                  'Web',
+                'Feedback',
                   style: Theme.of(context).textTheme.labelSmall!.copyWith(
                       color: Colors.white,
                       letterSpacing: 1.2,

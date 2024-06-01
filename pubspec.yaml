@@ -23,6 +23,8 @@ dependencies:
   share_plus: ^9.0.0
   firebase_core: ^2.31.1
   dashboard: ^0.0.4
+  swipe_image_gallery: ^0.8.7
+  feedback: ^3.1.0
 
 dev_dependencies:
   flutter_test:
