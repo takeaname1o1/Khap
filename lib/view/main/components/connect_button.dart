@@ -1,6 +1,6 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
 import '../../../res/constants.dart';
 import 'package:feedback/feedback.dart';
 
@@ -35,7 +35,7 @@ class ConnectButton extends StatelessWidget {
                 ]),
                 boxShadow: const [
                   BoxShadow(
-                      color: Colors.blue,
+                      color: bgColor,
                       offset: Offset(0, -1),
                       blurRadius: defaultPadding),
                   BoxShadow(

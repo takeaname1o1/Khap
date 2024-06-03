@@ -13,7 +13,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(BetterFeedback(child: const MyApp()));
+  runApp(const BetterFeedback(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
