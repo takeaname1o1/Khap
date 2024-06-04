@@ -9,7 +9,7 @@ import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 class Clubs extends StatelessWidget {
   final controller = Get.put(FormController());
 
-  Clubs({Key? key}) : super(key: key);
+  Clubs({super.key});
 
   @override
   Widget build(BuildContext context) {
