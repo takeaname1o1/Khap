@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:khap/view/certifications/certifications.dart';
+import 'package:khap/view/globalChat/globalChat.dart';
 import 'package:khap/view/form/form.dart';
 import 'package:khap/view/intro/introduction.dart';
 import 'package:khap/view/main/main_view.dart';
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       Maps(),
       Clubs(),
       forms(),
-      Certifications(),
+      GlobalChat(),
       ProjectsView(),
       Introduction(),
     ]);

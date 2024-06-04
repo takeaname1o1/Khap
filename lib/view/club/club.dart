@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:khap/res/constants.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 import 'package:dashboard/dashboard.dart';
 
 import '../../../model/club_model.dart';

@@ -26,6 +26,10 @@ dependencies:
   swipe_image_gallery: ^0.8.7
   feedback: ^3.1.0
   cached_network_image: ^3.3.1
+  flutter_chat_ui: ^1.6.13
+  file_picker: ^8.0.3
+  image_picker: ^1.1.2
+  open_filex: ^4.4.0
 
 dev_dependencies:
   flutter_test:
