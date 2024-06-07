@@ -10,6 +10,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 class MainView extends StatelessWidget {
   const MainView({super.key, required this.pages});
   final List<Widget> pages;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,13 +18,14 @@ class MainView extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            kIsWeb && !Responsive.isLargeMobile(context)
-                ? const SizedBox(
-                    height: defaultPadding * 2,
-                  )
-                : const SizedBox(
-                    height: defaultPadding / 2,
-                  ),
+            if (kIsWeb && !Responsive.isLargeMobile(context))
+              Padding(
+                padding: EdgeInsets.only(top: defaultPadding * 2),
+              )
+            else
+              Padding(
+                padding: EdgeInsets.only(top: defaultPadding / 2),
+              ),
             const SizedBox(
               height: 80,
               child: TopNavigationBar(),
@@ -38,7 +40,7 @@ class MainView extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 physics: const NeverScrollableScrollPhysics(),
                 controller: controller,
-                children: [...pages],
+                children: pages,
               ),
             )
           ],

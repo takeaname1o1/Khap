@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:khap/res/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dashboard/dashboard.dart';
 import 'package:khap/view/projects/components/title_text.dart';
 import '../../../model/club_model.dart';
 import 'package:khap/view%20model/getx_controllers/form_controller.dart';
+
+import 'package:flutter_survey/flutter_survey.dart';
 
 class Clubs extends StatelessWidget {
   final controller = Get.put(FormController());
@@ -15,11 +18,15 @@ class Clubs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: bgColor,
+        toolbarHeight: 56.0,
+        //decrease height size to min
         title: const TitleText(prefix: 'Club &', title: 'Society'),
       ),
       body: ClubsDashboard(),
       floatingActionButton: ElevatedButton(
         onPressed: () {
+//TODO:  add demo flutter_survey: ^0.1.4
           // Define the action when the button is pressed
         },
         child: const Text("Show Your Interest"),
