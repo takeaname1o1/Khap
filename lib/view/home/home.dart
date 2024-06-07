@@ -13,10 +13,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainView(pages: [
-      Maps(),
+
+      GlobalChat(),
       Clubs(),
       forms(),
-      GlobalChat(),
+      Maps(),
       ProjectsView(),
       Introduction(),
     ]);
