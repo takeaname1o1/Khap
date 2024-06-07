@@ -14,8 +14,16 @@ class Clubs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //TODO: const TitleText(prefix: 'Club &', title: 'Society');
+      appBar: AppBar(
+        title: const TitleText(prefix: 'Club &', title: 'Society'),
+      ),
       body: ClubsDashboard(),
+      floatingActionButton: ElevatedButton(
+        onPressed: () {
+          // Define the action when the button is pressed
+        },
+        child: const Text("Show Your Interest"),
+      ),
     );
   }
 }
@@ -88,7 +96,6 @@ class ClubWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color.fromARGB(255, 0, 0, 0);
     return GestureDetector(
       onTap: () => launchUrl(Uri.parse(club.socialLink)),
       child: Container(
