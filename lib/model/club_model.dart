@@ -83,4 +83,9 @@ List<Club> clubs = [
     'https://linktr.ee/danceclubnits',
     'https://i.imgur.com/U7r99h7.png',
   ),
+  Club(
+    'football',
+    'https://www.instagram.com/nits_football_official/',
+    'https://i.imgur.com/UxRofO7.jpeg',
+  ),
 ];

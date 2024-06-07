@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dashboard/dashboard.dart';
-
+import 'package:khap/view/projects/components/title_text.dart';
 import '../../../model/club_model.dart';
 import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 
@@ -14,6 +14,7 @@ class Clubs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //TODO: const TitleText(prefix: 'Club &', title: 'Society');
       body: ClubsDashboard(),
     );
   }
@@ -89,7 +90,6 @@ class ClubWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     const Color.fromARGB(255, 0, 0, 0);
     return GestureDetector(
-      //   launchUrl(Uri.parse(certificateList[index].credential));
       onTap: () => launchUrl(Uri.parse(club.socialLink)),
       child: Container(
         color: const Color.fromARGB(255, 0, 0, 0),
@@ -103,4 +103,3 @@ class ClubWidget extends StatelessWidget {
     );
   }
 }
-

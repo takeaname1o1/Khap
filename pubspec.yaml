@@ -30,6 +30,7 @@ dependencies:
   file_picker: ^8.0.3
   image_picker: ^1.1.2
   open_filex: ^4.4.0
+  flutter_firebase_chat_core: ^1.6.7
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +44,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/map/
     - assets/icons/
     - assets/
 
