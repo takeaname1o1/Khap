@@ -6,9 +6,10 @@ import 'package:khap/view/splash/splash_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 Future<void> main() async {
+   Gemini.init(apiKey: 'AIzaSyA3JDrCi8gNzYkBpgokfgW_o2GIN3Xx5bI');
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

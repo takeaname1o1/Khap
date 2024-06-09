@@ -29,8 +29,8 @@ class HomePage extends StatelessWidget {
         children: [
           Expanded(
             child: MainView(pages: [
+               GlobalChat(),
               Clubs(),
-              GlobalChat(),
               forms(),
               Maps(),
               ProjectsView(),
