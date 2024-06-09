@@ -28,7 +28,7 @@ class NavigationButtonList extends StatelessWidget {
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
                   },
-                  text: 'AI'),
+                  text: 'AI Chat'),
               NavigationTextButton(
                   onTap: () {
                     controller.animateToPage(3,

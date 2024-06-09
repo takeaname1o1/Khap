@@ -9,7 +9,7 @@ import 'firebase_options.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 
 Future<void> main() async {
-   Gemini.init(apiKey: 'AIzaSyA3JDrCi8gNzYkBpgokfgW_o2GIN3Xx5bI');
+  Gemini.init(apiKey: 'AIzaSyA3JDrCi8gNzYkBpgokfgW_o2GIN3Xx5bI');
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               .copyWith(
                 bodyLarge: const TextStyle(color: bodyTextColor),
                 bodyMedium: const TextStyle(color: bodyTextColor),
-        ),
+              ),
         ),
         home: const SplashView());
   }

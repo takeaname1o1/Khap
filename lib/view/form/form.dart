@@ -20,7 +20,7 @@ class forms extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: 'Club &', title: 'Society'),
+          const TitleText(prefix: 'Popular ', title: 'Society'),
           const SizedBox(
             height: defaultPadding,
           ),
