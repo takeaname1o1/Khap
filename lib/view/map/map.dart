@@ -1,96 +1,73 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:swipe_image_gallery/swipe_image_gallery.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 
-final assets = [
-  const Image(image: AssetImage('assets/map/1.png')),
-  const Image(image: AssetImage('assets/map/2.png')),
-  const Image(image: AssetImage('assets/map/3.png')),
-  const Image(image: AssetImage('assets/map/4.png')),
-];
+// Controller for the image gallery (if needed)
+//final ImageGalleryController galleryController = ImageGalleryController(initialPage: 2);
 
-// Controller for the image gallery
-final ImageGalleryController galleryController =
-    ImageGalleryController(initialPage: 2);
-
-class Maps extends StatelessWidget {
+class Maps extends StatefulWidget {
   final controller = Get.put(FormController());
 
   Maps({Key? key}) : super(key: key);
 
   @override
+  _MapsState createState() => _MapsState();
+}
+
+class _MapsState extends State<Maps> {
+  late Future<String?> memeFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    memeFuture = fetchMemeUrl();
+  }
+
+  Future<String?> fetchMemeUrl() async {
+    final response = await http.get(Uri.parse('https://meme-api.com/gimme'));
+    if (response.statusCode == 200) {
+      final jsonData = json.decode(response.body);
+      return jsonData['url'];
+    } else {
+      throw Exception('Failed to load meme');
+    }
+  }
+
+  void reloadMeme() {
+    setState(() {
+      memeFuture = fetchMemeUrl();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
-          children: [
-            //const Text('Open Gallery With Widgets'),
-            //const Text('Open Gallery With Assets'),
-            //const Text('Open Gallery With Controller'),
-            //const Text('Open Gallery With Builder'),
-            const Text('image view Example'),
-            Column(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () => SwipeImageGallery(
-                        context: context,
-                        children: [assets[0], assets[1], assets[2], assets[3]],
-                      ).show(),
-                      child: const Hero(
-                        tag: 'imageId1',
-                        child: Image(image: AssetImage('assets/map/1.png')),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: InkWell(
-                    onTap: () => SwipeImageGallery(
-                      context: context,
-                      children: [assets[0], assets[1], assets[2], assets[3]],
-                      initialIndex: 1,
-                    ).show(),
-                    child: const Hero(
-                      tag: 'imageId2',
-                      child: Image(image: AssetImage('assets/map/2.png')),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: InkWell(
-                    onTap: () => SwipeImageGallery(
-                      context: context,
-                      children: [assets[0], assets[1], assets[2], assets[3]],
-                      initialIndex: 2,
-                    ).show(),
-                    child: const Hero(
-                      tag: 'imageId3',
-                      child: Image(image: AssetImage('assets/map/3.png')),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: InkWell(
-                    onTap: () => SwipeImageGallery(
-                      context: context,
-                      children: [assets[0], assets[1], assets[2], assets[3]],
-                      initialIndex: 3,
-                    ).show(),
-                    child: const Hero(
-                      tag: 'imageId4',
-                      child: Image(image: AssetImage('assets/map/4.png')),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        title: Text('Meme Viewer'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: reloadMeme,
+          ),
+        ],
+      ),
+      body: FutureBuilder<String?>(
+        future: memeFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return Center(child: Text('Error: ${snapshot.error}'));
+          } else if (snapshot.hasData) {
+            return Center(
+              child: Image.network(snapshot.data!),
+            );
+          } else {
+            return Center(child: Text('No meme found'));
+          }
+        },
       ),
     );
   }
