@@ -16,10 +16,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> galleryWidgets = [
+      Maps(),
       Clubs(),
       GlobalChat(),
       forms(),
-      Maps(),
       ProjectsView(),
       Introduction(),
     ];
@@ -28,14 +28,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: MainView(pages: [
-               GlobalChat(),
-              Clubs(),
-              forms(),
-              Maps(),
-              ProjectsView(),
-              Introduction(),
-            ]),
+            child: MainView(pages: galleryWidgets),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
