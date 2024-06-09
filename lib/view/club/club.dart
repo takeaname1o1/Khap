@@ -7,7 +7,7 @@ import 'package:khap/view/projects/components/title_text.dart';
 import '../../../model/club_model.dart';
 import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 
-import 'package:flutter_survey/flutter_survey.dart';
+//import 'package:flutter_survey/flutter_survey.dart';
 
 class Clubs extends StatelessWidget {
   final controller = Get.put(FormController());

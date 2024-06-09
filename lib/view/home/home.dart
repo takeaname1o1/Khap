@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainView(pages: [
       Clubs(),
-      GlobalChat(),
+     GlobalChat(),
       forms(),
       Maps(),
       ProjectsView(),
