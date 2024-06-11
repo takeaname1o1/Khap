@@ -45,7 +45,7 @@ class _MapsState extends State<Maps> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meme Viewer'),
+        title: Text('Meme Explorer'),
         actions: [
           IconButton(
             icon: Icon(Icons.refresh),
