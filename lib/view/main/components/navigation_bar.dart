@@ -24,7 +24,7 @@ class TopNavigationBar extends StatelessWidget {
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
                     },
-                    child: Image.asset(
+                    child: Image. asset(
                       'assets/logotopleft.png',
                     ),
                   )

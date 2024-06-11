@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:khap/res/constants.dart';
 import 'dart:convert';
 import 'package:khap/view%20model/getx_controllers/form_controller.dart';
 
@@ -45,7 +46,13 @@ class _MapsState extends State<Maps> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meme Explorer'),
+        backgroundColor: bgColor,
+        title: Container(child: Text(
+          'Meme Explorer',
+          style: TextStyle(
+            color: Colors.white
+          ),
+          )),
         actions: [
           IconButton(
             icon: Icon(Icons.refresh),

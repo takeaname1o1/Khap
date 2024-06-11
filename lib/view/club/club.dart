@@ -21,7 +21,7 @@ class Clubs extends StatelessWidget {
         backgroundColor: bgColor,
         toolbarHeight: 56.0,
         //decrease height size to min
-       title: const TitleText(prefix: 'Popular ', title: 'Club'),
+        title: const TitleText(prefix: 'Popular ', title: 'Club'),
       ),
       body: ClubsDashboard(),
       floatingActionButton: ElevatedButton(
