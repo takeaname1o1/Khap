@@ -9,7 +9,7 @@ import 'firebase_options.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 
 
-//TODO : update society make it grid 
+//TODO : update society make it grid
 //TODO : update club add interested button 
 
 Future<void> main() async {

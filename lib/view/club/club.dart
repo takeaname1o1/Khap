@@ -107,8 +107,8 @@ class ClubWidget extends StatelessWidget {
       onTap: () => launchUrl(Uri.parse(club.socialLink)),
       child: Container(
         color: const Color.fromARGB(255, 0, 0, 0),
-        child: Image.network(
-          club.logo,
+        child: Image.asset(
+          club.logoPath,
           fit: BoxFit.fitWidth,
           height: 100,
           width: 100,
