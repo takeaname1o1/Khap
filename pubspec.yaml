@@ -49,6 +49,7 @@ flutter:
     - assets/map/
     - assets/icons/
     - assets/
+    - assets/society/
 
 icons_launcher:
   image_path: '/home/alp/Desktop/project/Khap_app_web/assets/AppIcons/playstore.png'

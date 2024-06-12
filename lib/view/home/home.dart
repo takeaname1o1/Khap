@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
       Maps(),
       Clubs(),
       GlobalChat(),
-      forms(),
+      Society(),
+      //forms(),
       ProjectsView(),
       Introduction(),
     ];
