@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
+
 // For testing purposes, you should probably use https://pub.dev/packages/uuid.
 String randomString() {
   final random = Random.secure();
@@ -36,8 +37,7 @@ class ChatUI extends StatefulWidget {
 class _ChatUIState extends State<ChatUI> {
   final List<types.Message> _messages = [];
   final _user = const types.User(id: '82091008-a484-4a89-ae75-a22bf8d6f3ac');
- final _gemini = Gemini.instance;
-
+  final _gemini = Gemini.instance;
 
   @override
   void initState() {
@@ -47,25 +47,25 @@ class _ChatUIState extends State<ChatUI> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    body: Chat(
-      messages: _messages,
-      onSendPressed: _handleSendPressed,
-      user: _user,
-      theme: const DefaultChatTheme(
-        primaryColor: Color.fromRGBO(37, 7, 75, 1.0),
-        inputBackgroundColor: Color.fromRGBO(255, 255, 255, 0.36),
-        backgroundColor: bgColor,
-        inputTextColor: Colors.black,
-        inputTextDecoration: InputDecoration(
-          hintText: 'Type a message...',
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            borderSide: BorderSide.none,
+        body: Chat(
+          messages: _messages,
+          onSendPressed: _handleSendPressed,
+          user: _user,
+          theme: const DefaultChatTheme(
+            primaryColor: Color.fromRGBO(37, 7, 75, 1.0),
+            inputBackgroundColor: Color.fromRGBO(255, 255, 255, 0.36),
+            backgroundColor: bgColor,
+            inputTextColor: Colors.black,
+            inputTextDecoration: InputDecoration(
+              hintText: 'Type a message...',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderSide: BorderSide.none,
+              ),
+            ),
           ),
         ),
-      ),
-    ),
-  );
+      );
 
   void _addMessage(types.Message message) {
     setState(() {
@@ -86,7 +86,7 @@ class _ChatUIState extends State<ChatUI> {
     try {
       final response = await _gemini.streamGenerateContent(message.text).first;
       final botMessageText = response.output ?? 'Error: No response';
-      
+
       final botMessage = types.TextMessage(
         author: const types.User(id: 'bot'),
         createdAt: DateTime.now().millisecondsSinceEpoch,
