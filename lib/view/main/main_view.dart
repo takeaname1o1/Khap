@@ -3,7 +3,7 @@ import 'package:khap/view%20model/controller.dart';
 import 'package:khap/res/constants.dart';
 import 'package:khap/view/main/components/navigation_bar.dart';
 import 'components/drawer/drawer.dart';
-import 'components/navigation_button_list.dart';
+//import 'components/navigation_button_list.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class MainView extends StatelessWidget {

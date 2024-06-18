@@ -47,18 +47,10 @@ class _MapsState extends State<Maps> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: bgColor,
-        title: Container(child: Text(
-          'Meme Explorer',
-          style: TextStyle(
-            color: Colors.white
-          ),
-          )),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.refresh),
-            onPressed: reloadMeme,
-          ),
-        ],
+        title: Text(
+                  'Meme Explorer',
+                  style: TextStyle(color: Colors.white),
+                ),
       ),
       body: FutureBuilder<String?>(
         future: memeFuture,
@@ -69,7 +61,11 @@ class _MapsState extends State<Maps> {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (snapshot.hasData) {
             return Center(
-              child: Image.network(snapshot.data!),
+              child: GestureDetector(
+                onTap: reloadMeme,
+                child: Image.network(snapshot.data!),
+              ),
+              // child: Image.network(snapshot.data!), // add on tap
             );
           } else {
             return Center(child: Text('No meme found'));

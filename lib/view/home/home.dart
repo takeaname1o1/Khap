@@ -31,19 +31,7 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: MainView(pages: galleryWidgets),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                // Trigger the SwipeImageGallery to show
-                SwipeImageGallery(
-                  context: context,
-                  children: galleryWidgets,
-                ).show();
-              },
-              child: Text('Swipe mode'),
-            ),
-          ),
+          //Text('Swipe mode'),
         ],
       ),
     );

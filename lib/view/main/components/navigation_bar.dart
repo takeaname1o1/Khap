@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:khap/view/intro/components/side_menu_button.dart';
+//import 'package:khap/view/intro/components/side_menu_button.dart';
 import 'package:khap/view/main/components/connect_button.dart';
+import 'package:khap/view/main/components/full_screen.dart';
 import 'navigation_button_list.dart';
-import 'package:khap/view%20model/controller.dart';
+//import 'package:khap/view%20model/controller.dart';
 
 class TopNavigationBar extends StatelessWidget {
   const TopNavigationBar({super.key});
@@ -26,6 +27,7 @@ class TopNavigationBar extends StatelessWidget {
           const NavigationButtonList(),
           //const Spacer(flex: 2),
           const ConnectButton(),
+          const FullScreen(),
           //const Spacer(),
         ],
       ),
