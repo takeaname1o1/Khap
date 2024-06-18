@@ -139,17 +139,24 @@ List<FormModel> formList = [
         'https://in.linkedin.com/company/electronics-and-communication-society-nit-silchar',
   ),
   FormModel(
-    name: 'Mechanical Engineering Society',
-    cName: 'MES',
-    imgPath: 'assets/society/me.png',
-    dlink: 'https://in.linkedin.com/company/mes-nit-silchar',
-  ),
-  FormModel(
     name: 'Electrical Engineering Society',
     cName: 'EES',
     imgPath: 'assets/society/ee.png',
     dlink:
         'https://in.linkedin.com/company/electrical-engineering-society-nit-silchar',
+  ),
+  FormModel(
+    name: 'Instrumentation and Electronics Engineering Society',
+    cName: 'IEES',
+    imgPath: 'assets/society/ie.png',
+    dlink:
+        'linkedin.com/in/insees',
+  ),
+  FormModel(
+    name: 'Mechanical Engineering Society',
+    cName: 'MES',
+    imgPath: 'assets/society/me.png',
+    dlink: 'https://in.linkedin.com/company/mes-nit-silchar',
   ),
   FormModel(
     name: 'Civil Engineering Society',

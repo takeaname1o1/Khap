@@ -19,7 +19,7 @@ class Clubs extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: bgColor,
-        toolbarHeight: 20.0,
+        toolbarHeight: 56.0,
         title: const TitleText(prefix: 'Popular ', title: 'Club'),
       ),
       body: ClubsDashboard(),
@@ -106,7 +106,7 @@ class ClubWidget extends StatelessWidget {
           color: const Color.fromARGB(255, 0, 0, 0),
           child: Image.asset(
             club.logoPath,
-            fit: BoxFit.fill,
+            fit: BoxFit.fitWidth,
           ),
         ),
       ),
