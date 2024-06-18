@@ -24,7 +24,9 @@ class Clubs extends StatelessWidget {
       ),
       body: ClubsDashboard(),
       floatingActionButton: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          //TODO: add survey
+        },
         child: const Text("Show Your Interest"),
       ),
     );

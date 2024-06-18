@@ -8,7 +8,7 @@ import 'package:khap/view/map/map.dart';
 import 'package:khap/view/club/club.dart';
 // Import the SwipeImageGallery package if it exists
 //import 'package:your_package/swipe_image_gallery.dart'; // Update this with the actual package name if necessary
-import 'package:swipe_image_gallery/swipe_image_gallery.dart';
+//import 'package:swipe_image_gallery/swipe_image_gallery.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

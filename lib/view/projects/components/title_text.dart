@@ -1,10 +1,8 @@
-//import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-
 import '../../../view model/responsive.dart';
 
 class TitleText extends StatelessWidget {
-  const TitleText({super.key, required this.prefix, required this.title});
+  const TitleText({Key? key, required this.prefix, required this.title}) : super(key: key);
 
   final String prefix;
   final String title;
@@ -13,11 +11,11 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     final double fontSize = !Responsive.isDesktop(context)
         ? Responsive.isLargeMobile(context)
-            ? 20
-            : 30
-        : 50;
+            ? 18 // Decreased font size for large mobile
+            : 24 // Default font size for smaller mobile
+        : 40; // Font size for desktop
 
-    final textStyle = Theme.of(context).textTheme.titleMedium!.copyWith(
+    final textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
           color: Colors.white,
           fontSize: fontSize,
           fontWeight: FontWeight.bold,
@@ -34,11 +32,20 @@ class TitleText extends StatelessWidget {
       child: Text(title, style: textStyle),
     );
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start, // Align children to the start
+      crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
       children: [
-        Text('$prefix ', style: textStyle),
-        titleWidget,
+        SizedBox(height: 8), // Adjust vertical spacing with SizedBox
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center, // Align text vertically
+          children: [
+            Text('$prefix ', style: textStyle),
+            titleWidget,
+          ],
+        ),
+        SizedBox(height: 8), // Adjust vertical spacing with SizedBox
       ],
     );
   }

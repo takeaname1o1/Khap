@@ -1,36 +1,29 @@
 import 'package:flutter/material.dart';
-//import 'package:khap/view/intro/components/side_menu_button.dart';
-import 'package:khap/view/main/components/connect_button.dart';
 import 'package:khap/view/main/components/full_screen.dart';
 import 'navigation_button_list.dart';
-//import 'package:khap/view%20model/controller.dart';
 
 class TopNavigationBar extends StatelessWidget {
-  const TopNavigationBar({super.key});
+  const TopNavigationBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-         // const Spacer(),
-          GestureDetector(
-            onTap: () {
-              Scaffold.of(context).openDrawer();
-            },
-            child: Image.asset(
-              'assets/logotopleft.png',
-              height: 40.0, // Adjust the height as needed
-            ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: () {
+            Scaffold.of(context).openDrawer();
+          },
+          child: Image.asset(
+            'assets/logotopleft.png',
+            fit: BoxFit.scaleDown,
+            height: 20,
+            //the height as needed
           ),
-          const NavigationButtonList(),
-          //const Spacer(flex: 2),
-          const ConnectButton(),
-          const FullScreen(),
-          //const Spacer(),
-        ],
-      ),
+        ),
+        const NavigationButtonList(),
+        const FullScreen(),
+      ],
     );
   }
 }

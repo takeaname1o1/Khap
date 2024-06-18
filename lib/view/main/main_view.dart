@@ -20,10 +20,7 @@ class MainView extends StatelessWidget {
             Padding(
               padding: kIsWeb ? EdgeInsets.only(top: defaultPadding * 2) : EdgeInsets.only(top: defaultPadding / 2),
             ),
-            const SizedBox(
-              height: 80,
-              child: TopNavigationBar(),
-            ),
+            
             //Spacer(), NavigationButtonList(), Spacer(),
             Expanded(
               flex: 9,
@@ -33,7 +30,11 @@ class MainView extends StatelessWidget {
                 controller: controller,
                 children: pages,
               ),
-            )
+            ),
+            const SizedBox(
+              height: 80,
+              child: TopNavigationBar(),
+            ),
           ],
         ),
       ),

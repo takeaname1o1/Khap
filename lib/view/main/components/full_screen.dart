@@ -24,20 +24,15 @@ class FullScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-      child: Center(
-        child: IconButton(
-          icon: Icon(Icons.fullscreen),
-          onPressed: () {
-            // Show the SwipeImageGallery when the IconButton is pressed
-            SwipeImageGallery(
-              context: context,
-              children: galleryWidgets,
-            ).show();
-          },
-        ),
-      ),
+    return IconButton(
+      icon: Icon(Icons.fullscreen),
+      onPressed: () {
+        // Show the SwipeImageGallery when the IconButton is pressed
+        SwipeImageGallery(
+          context: context,
+          children: galleryWidgets,
+        ).show();
+      },
     );
   }
 }
